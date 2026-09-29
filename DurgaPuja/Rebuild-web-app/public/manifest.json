@@ -1,0 +1,952 @@
+
+{
+  "name": "Kolkata Durga Puja Guide 2025",
+  "short_name": "Puja Guide",
+  "description": "Complete Durga Puja festival companion for North Kolkata heritage route with interactive maps, pandal information, and cultural guide",
+  "version": "1.0.0",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#8B0000",
+  "theme_color": "#DC143C",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["travel", "lifestyle", "entertainment"],
+  "icons": [
+    {
+      "src": "https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg",
+      "sizes": "144x144",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg",
+      "sizes": "96x96",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg",
+      "sizes": "72x72",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg",
+      "sizes": "48x48",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Find Nearby Pandals",
+      "short_name": "Nearby",
+      "description": "Find pandals near your location",
+      "url": "/?action=nearby",
+      "icons": [{ 
+        "src": "https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg", 
+        "sizes": "96x96" 
+      }]
+    },
+    {
+      "name": "My Bookmarks",
+      "short_name": "Bookmarks",
+      "description": "View your bookmarked pandals",
+      "url": "/?action=bookmarks",
+      "icons": [{ 
+        "src": "https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg", 
+        "sizes": "96x96" 
+      }]
+    },
+    {
+      "name": "Route Planner",
+      "short_name": "Routes",
+      "description": "Plan your pandal hopping route",
+      "url": "/?action=routes",
+      "icons": [{ 
+        "src": "https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg", 
+        "sizes": "96x96" 
+      }]
+    },
+    {
+      "name": "Emergency Contacts",
+      "short_name": "Emergency",
+      "description": "Quick access to emergency numbers",
+      "url": "/?action=emergency",
+      "icons": [{ 
+        "src": "https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg", 
+        "sizes": "96x96" 
+      }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'%3E%3Crect width='540' height='720' fill='%23fff8f0'/%3E%3Crect x='0' y='0' width='540' height='120' fill='%23DC143C'/%3E%3Ctext x='270' y='70' text-anchor='middle' font-size='24' fill='white'%3EKolkata Durga Puja Guide%3C/text%3E%3Crect x='20' y='140' width='500' height='100' rx='10' fill='white' stroke='%23e0e0e0'/%3E%3Ctext x='40' y='180' font-size='16' fill='%23333'%3ETala Prattoy%3C/text%3E%3Ctext x='40' y='200' font-size='12' fill='%23666'%3ETraditional Bengali Architecture%3C/text%3E%3Crect x='20' y='260' width='500' height='100' rx='10' fill='white' stroke='%23e0e0e0'/%3E%3Ctext x='40' y='300' font-size='16' fill='%23333'%3EKumartuli Sarbojanin%3C/text%3E%3Ctext x='40' y='320' font-size='12' fill='%23666'%3EClay Artist Heritage%3C/text%3E%3C/svg%3E",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "Pandal List View"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 540'%3E%3Crect width='720' height='540' fill='%23f0f8ff'/%3E%3Crect x='0' y='0' width='720' height='80' fill='%23DC143C'/%3E%3Ctext x='360' y='50' text-anchor='middle' font-size='20' fill='white'%3EInteractive Map%3C/text%3E%3Crect x='20' y='100' width='680' height='420' rx='10' fill='%23e8f4fd' stroke='%23666'/%3E%3Ccircle cx='200' cy='200' r='8' fill='%23FF6B35'/%3E%3Ccircle cx='400' cy='300' r='8' fill='%2300B894'/%3E%3Ccircle cx='600' cy='250' r='8' fill='%23E17055'/%3E%3Ctext x='360' y='300' text-anchor='middle' font-size='14' fill='%23666'%3EPandal Locations%3C/text%3E%3C/svg%3E",
+      "sizes": "720x540",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Interactive Map View"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "dir": "ltr",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+puja",
+      "url": "/?pandal=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "photos",
+          "accept": ["image/*"]
+        }
+      ]
+    }
+  },
+  "appInfo": {
+    "name": "Kolkata Durga Puja Guide 2025",
+    "short_name": "Puja Guide",
+    "description": "Complete Durga Puja festival companion for North Kolkata heritage route with interactive maps, pandal information, and cultural guide",
+    "version": "1.0.0",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#8B0000",
+    "theme_color": "#DC143C",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en-US",
+    "categories": ["travel", "lifestyle", "entertainment"]
+  },
+  "pandalData": [
+    {
+      "id": "tala-prattoy",
+      "name": "Tala Prattoy",
+      "nameBn": "তালা প্রত্যয়",
+      "type": "heritage",
+      "area": "Tala",
+      "areaBn": "তালা",
+      "lat": 22.608846,
+      "lng": 88.382502,
+      "theme": "Traditional Bengali Architecture",
+      "themeBn": "ঐতিহ্যবাহী বাঙালি স্থাপত্য",
+      "hours": "6 AM - 11 PM",
+      "transport": "2.5 km from Dum Dum Metro",
+      "crowd": "medium",
+      "accessible": false
+    },
+    {
+      "id": "kumartuli-sarbojanin",
+      "name": "Kumartuli Sarbojanin",
+      "nameBn": "কুমারটুলি সর্বজনীন",
+      "type": "heritage",
+      "area": "Kumartuli",
+      "areaBn": "কুমারটুলি",
+      "lat": 22.599058253797256,
+      "lng": 88.36145439677378,
+      "theme": "Clay Artist Heritage",
+      "themeBn": "মৃৎশিল্পীদের ঐতিহ্য",
+      "hours": "5 AM - 11 PM",
+      "transport": "Near Sovabazar Metro",
+      "crowd": "high",
+      "accessible": false
+    },
+    {
+      "id": "baghbazar-sarbojanin",
+      "name": "Baghbazar Sarbojanin",
+      "nameBn": "বাগবাজার সর্বজনীন",
+      "type": "heritage",
+      "area": "Baghbazar",
+      "areaBn": "বাগবাজার",
+      "lat": 22.604667910075644,
+      "lng": 88.36562569985544,
+      "theme": "Traditional Pandal Art",
+      "themeBn": "ঐতিহ্যবাহী পণ্ডেল শিল্প",
+      "hours": "6 AM - 11 PM",
+      "transport": "Shyambazar Metro",
+      "crowd": "medium",
+      "accessible": true
+    },
+    {
+      "id": "sovabazar-rajbari",
+      "name": "Sovabazar Rajbari",
+      "nameBn": "শোভাবাজার রাজবাড়ি",
+      "type": "heritage",
+      "area": "Sovabazar",
+      "areaBn": "শোভাবাজার",
+      "lat": 22.596048876948696,
+      "lng": 88.36721188946015,
+      "theme": "Royal Heritage",
+      "themeBn": "রাজকীয় ঐতিহ্য",
+      "hours": "6 AM - 10 PM",
+      "transport": "Sovabazar Metro",
+      "crowd": "low",
+      "accessible": false
+    },
+    {
+      "id": "shyambazar-nabadurga",
+      "name": "Shyambazar Nabadurga",
+      "nameBn": "শ্যামবাজার নবদুর্গা",
+      "type": "heritage",
+      "area": "Shyambazar",
+      "areaBn": "শ্যামবাজার",
+      "lat": 22.5989,
+      "lng": 88.3731,
+      "theme": "Ancient Traditions",
+      "themeBn": "প্রাচীন ঐতিহ্য",
+      "hours": "5 AM - 11 PM",
+      "transport": "Shyambazar Metro",
+      "crowd": "high",
+      "accessible": true
+    },
+    {
+      "id": "jorasanko-thakur-bari",
+      "name": "Jorasanko Thakur Bari",
+      "nameBn": "জোড়াসাঁকো ঠাকুরবাড়ি",
+      "type": "heritage",
+      "area": "Jorasanko",
+      "areaBn": "জোড়াসাঁকো",
+      "lat": 22.585103506532562,
+      "lng": 88.3591643226664,
+      "theme": "Tagore Family Heritage",
+      "themeBn": "ঠাকুর পরিবারের ঐতিহ্য",
+      "hours": "6 AM - 10 PM",
+      "transport": "Girish Park Metro",
+      "crowd": "medium",
+      "accessible": false
+    },
+    {
+      "id": "college-square",
+      "name": "College Square",
+      "nameBn": "কলেজ স্কোয়ার",
+      "type": "heritage",
+      "area": "College Street",
+      "areaBn": "কলেজ স্ট্রিট",
+      "lat": 22.574666574660924,
+      "lng": 88.36444020917365,
+      "theme": "Educational Heritage",
+      "themeBn": "শিক্ষার ঐতিহ্য",
+      "hours": "6 AM - 12 AM",
+      "transport": "College Street",
+      "crowd": "medium",
+      "accessible": true
+    },
+    {
+      "id": "hatibagan-nabin-palli",
+      "name": "Hatibagan Nabin Palli",
+      "nameBn": "হাতিবাগান নবীন পল্লী",
+      "type": "heritage",
+      "area": "Hatibagan",
+      "areaBn": "হাতিবাগান",
+      "lat": 22.594535337634657,
+      "lng": 88.37201415600829,
+      "theme": "Traditional Craftsmanship",
+      "themeBn": "ঐতিহ্যবাহী কারুকাজ",
+      "hours": "6 AM - 11 PM",
+      "transport": "Shyambazar area",
+      "crowd": "medium",
+      "accessible": false
+    },
+    {
+      "id": "dum-dum-tarun-sangha",
+      "name": "Dum Dum Tarun Sangha",
+      "nameBn": "দমদম তরুণ সংঘ",
+      "type": "community",
+      "area": "Dum Dum",
+      "areaBn": "দমদম",
+      "lat": 22.611150114746334,
+      "lng": 88.41388348657216,
+      "theme": "Community Celebration",
+      "themeBn": "কমিউনিটি উৎসব",
+      "hours": "6 AM - 12 AM",
+      "transport": "Dum Dum Metro",
+      "crowd": "high",
+      "accessible": true
+    },
+    {
+      "id": "lake-town-adhibasi-brinda",
+      "name": "Lake Town Adhibasi Brinda",
+      "nameBn": "লেক টাউন আদিবাসী বৃন্দ",
+      "type": "community",
+      "area": "Lake Town",
+      "areaBn": "লেক টাউন",
+      "lat": 22.604629063063634,
+      "lng": 88.40397009568207,
+      "theme": "Tribal Culture",
+      "themeBn": "উপজাতীয় সংস্কৃতি",
+      "hours": "6 AM - 11 PM",
+      "transport": "Lake Town",
+      "crowd": "medium",
+      "accessible": true
+    },
+    {
+      "id": "salt-lake-fd-block",
+      "name": "Salt Lake FD Block",
+      "nameBn": "সল্ট লেক এফডি ব্লক",
+      "type": "community",
+      "area": "Salt Lake",
+      "areaBn": "সল্ট লেক",
+      "lat": 22.58371511476005,
+      "lng": 88.41226667452867,
+      "theme": "Modern Community",
+      "themeBn": "আধুনিক কমিউনিটি",
+      "hours": "6 AM - 12 AM",
+      "transport": "Salt Lake Stadium",
+      "crowd": "high",
+      "accessible": true
+    },
+    {
+      "id": "belgachia-club",
+      "name": "Belgachia Club",
+      "nameBn": "বেলগাছিয়া ক্লাব",
+      "type": "community",
+      "area": "Belgachia",
+      "areaBn": "বেলগাছিয়া",
+      "lat": 22.605685067219326,
+      "lng": 88.3235694456533,
+      "theme": "Local Community Spirit",
+      "themeBn": "স্থানীয় কমিউনিটির চেতনা",
+      "hours": "6 AM - 11 PM",
+      "transport": "Belgachia area",
+      "crowd": "medium",
+      "accessible": false
+    },
+    {
+      "id": "madhyamgram-chhatri-sangha",
+      "name": "Madhyamgram Chhatri Sangha",
+      "nameBn": "মধ্যমগ্রাম ছাত্রী সংঘ",
+      "type": "community",
+      "area": "Madhyamgram",
+      "areaBn": "মধ্যমগ্রাম",
+      "lat": 22.6700,
+      "lng": 88.4600,
+      "theme": "Student Community",
+      "themeBn": "ছাত্র কমিউনিটি",
+      "hours": "6 AM - 11 PM",
+      "transport": "Madhyamgram Station",
+      "crowd": "medium",
+      "accessible": false
+    },
+    {
+      "id": "barasat-sarbojanin",
+      "name": "Barasat Sarbojanin",
+      "nameBn": "বারাসাত সর্বজনীন",
+      "type": "community",
+      "area": "Barasat",
+      "areaBn": "বারাসাত",
+      "lat": 22.7200,
+      "lng": 88.4800,
+      "theme": "Rural Community",
+      "themeBn": "গ্রামীণ কমিউনিটি",
+      "hours": "5 AM - 11 PM",
+      "transport": "Barasat Station",
+      "crowd": "high",
+      "accessible": false
+    },
+    {
+      "id": "sree-bhumi-sporting-club",
+      "name": "Sree Bhumi Sporting Club",
+      "nameBn": "শ্রীভূমি স্পোর্টিং ক্লাব",
+      "type": "theme",
+      "area": "Dum Dum",
+      "areaBn": "দমদম",
+      "lat": 22.600473996675507,
+      "lng": 88.40264529965181,
+      "theme": "Grand Spectacular Theme",
+      "themeBn": "মহান দর্শনীয় থিম",
+      "hours": "24 Hours",
+      "transport": "Dum Dum Metro",
+      "crowd": "high",
+      "accessible": false
+    },
+    {
+      "id": "santosh-mitra-square",
+      "name": "Santosh Mitra Square",
+      "nameBn": "সন্তোষ মিত্র স্কোয়ার",
+      "type": "theme",
+      "area": "Central Kolkata",
+      "areaBn": "মধ্য কলকাতা",
+      "lat": 22.566206670311463,
+      "lng": 88.36565080732241,
+      "theme": "Modern Art Installation",
+      "themeBn": "আধুনিক শিল্প ইনস্টলেশন",
+      "hours": "6 AM - 12 AM",
+      "transport": "Central Metro",
+      "crowd": "medium",
+      "accessible": true
+    },
+    {
+      "id": "triangular-park",
+      "name": "Triangular Park",
+      "nameBn": "ত্রিভুজাকার পার্ক",
+      "type": "theme",
+      "area": "Gariahat",
+      "areaBn": "গড়িয়াহাট",
+      "lat": 22.517767387211045,
+      "lng": 88.35890325206616,
+      "theme": "Contemporary Design",
+      "themeBn": "সমসাময়িক ডিজাইন",
+      "hours": "6 AM - 12 AM",
+      "transport": "Gariahat Metro",
+      "crowd": "high",
+      "accessible": true
+    },
+    {
+      "id": "girish-park-sarbojanin",
+      "name": "Girish Park Sarbojanin",
+      "nameBn": "গিরিশ পার্ক সর্বজনীন",
+      "type": "community",
+      "area": "Girish Park",
+      "areaBn": "গিরিশ পার্ক",
+      "lat": 22.5800,
+      "lng": 88.3600,
+      "theme": "Theatre Community",
+      "themeBn": "নাট্য কমিউনিটি",
+      "hours": "6 AM - 11 PM",
+      "transport": "Girish Park Metro",
+      "crowd": "medium",
+      "accessible": false
+    },
+    {
+      "id": "mg-road-durgotsab",
+      "name": "MG Road Durgotsab",
+      "nameBn": "এমজি রোড দুর্গোৎসব",
+      "type": "heritage",
+      "area": "MG Road",
+      "areaBn": "এমজি রোড",
+      "lat": 22.586598335674434,
+      "lng": 88.36239486887767,
+      "theme": "Commercial Heritage",
+      "themeBn": "বাণিজ্যিক ঐতিহ্য",
+      "hours": "6 AM - 12 AM",
+      "transport": "Central Metro",
+      "crowd": "high",
+      "accessible": true
+    },
+    {
+      "id": "ahiritola-sarbojanin",
+      "name": "Ahiritola Sarbojanin",
+      "nameBn": "আহিরিটোলা সর্বজনীন",
+      "type": "heritage",
+      "area": "Ahiritola",
+      "areaBn": "আহিরিটোলা",
+      "lat": 22.59510885849594,
+      "lng": 88.35721408033837,
+      "theme": "River Ghat Heritage",
+      "themeBn": "নদীর ঘাটের ঐতিহ্য",
+      "hours": "5 AM - 11 PM",
+      "transport": "Near Bagbazar Ghat",
+      "crowd": "medium",
+      "accessible": false
+    },
+    {
+      "id": "chitpur-sarbojanin",
+      "name": "Chitpur Sarbojanin",
+      "nameBn": "চিৎপুর সর্বজনীন",
+      "type": "heritage",
+      "area": "Chitpur",
+      "areaBn": "চিৎপুর",
+      "lat": 22.5950,
+      "lng": 88.3800,
+      "theme": "Traditional North Kolkata",
+      "themeBn": "ঐতিহ্যবাহী উত্তর কলকাতা",
+      "hours": "6 AM - 11 PM",
+      "transport": "Chitpur area",
+      "crowd": "medium",
+      "accessible": true
+    },
+    {
+      "id": "sinthi-sarbojanin",
+      "name": "Sinthi Sarbojanin",
+      "nameBn": "সিন্থি সর্বজনীন",
+      "type": "community",
+      "area": "Sinthi",
+      "areaBn": "সিন্থি",
+      "lat": 22.627251854893327,
+      "lng": 88.38964196684697,
+      "theme": "Riverside Community",
+      "themeBn": "নদীর পাড়ের কমিউনিটি",
+      "hours": "6 AM - 11 PM",
+      "transport": "Sinthi area",
+      "crowd": "medium",
+      "accessible": false
+    },
+    {
+      "id": "agarpara-sarbojanin",
+      "name": "Agarpara Sarbojanin",
+      "nameBn": "আগরপাড়া সর্বজনীন",
+      "type": "community",
+      "area": "Agarpara",
+      "areaBn": "আগরপাড়া",
+      "lat": 22.6400,
+      "lng": 88.3700,
+      "theme": "Industrial Community",
+      "themeBn": "শিল্প কমিউনিটি",
+      "hours": "6 AM - 11 PM",
+      "transport": "Agarpara Station",
+      "crowd": "low",
+      "accessible": false
+    },
+    {
+      "id": "jessore-road-sarbojanin",
+      "name": "Jessore Road Sarbojanin",
+      "nameBn": "যশোর রোড সর্বজনীন",
+      "type": "community",
+      "area": "Jessore Road",
+      "areaBn": "যশোর রোড",
+      "lat": 22.6400,
+      "lng": 88.4200,
+      "theme": "Highway Community",
+      "themeBn": "হাইওয়ে কমিউনিটি",
+      "hours": "6 AM - 11 PM",
+      "transport": "Jessore Road",
+      "crowd": "medium",
+      "accessible": false
+    },
+    {
+      "id": "airport-gate-sarbojanin",
+      "name": "Airport Gate Sarbojanin",
+      "nameBn": "বিমানবন্দর গেট সর্বজনীন",
+      "type": "community",
+      "area": "Airport",
+      "areaBn": "বিমানবন্দর",
+      "lat": 22.6500,
+      "lng": 88.4500,
+      "theme": "Aviation Community",
+      "themeBn": "বিমান চলাচল কমিউনিটি",
+      "hours": "6 AM - 11 PM",
+      "transport": "Airport area",
+      "crowd": "medium",
+      "accessible": true
+    },
+    {
+      "id": "pathuriaghata-ghosh-bari",
+      "name": "Pathuriaghata Ghosh Bari",
+      "nameBn": "পাথুরিয়াঘাটা ঘোষ বাড়ি",
+      "type": "heritage",
+      "area": "Pathuriaghata",
+      "areaBn": "পাথুরিয়াঘাটা",
+      "lat": 22.5900,
+      "lng": 88.3600,
+      "theme": "Zamindari Heritage",
+      "themeBn": "জমিদারি ঐতিহ্য",
+      "hours": "6 AM - 10 PM",
+      "transport": "Central Metro",
+      "crowd": "low",
+      "accessible": false
+    },
+    {
+      "id": "beadon-street",
+      "name": "Beadon Street",
+      "nameBn": "বিডন স্ট্রিট",
+      "type": "heritage",
+      "area": "Beadon Street",
+      "areaBn": "বিডন স্ট্রিট",
+      "lat": 22.58934992539946,
+      "lng": 88.36758110917404,
+      "theme": "Colonial Heritage",
+      "themeBn": "ঔপনিবেশিক ঐতিহ্য",
+      "hours": "6 AM - 11 PM",
+      "transport": "Central Kolkata",
+      "crowd": "low",
+      "accessible": false
+    },
+    {
+      "id": "rajarhat-new-town",
+      "name": "Rajarhat New Town",
+      "nameBn": "রাজারহাট নিউ টাউন",
+      "type": "community",
+      "area": "New Town",
+      "areaBn": "নিউ টাউন",
+      "lat": 22.584334183757967,
+      "lng": 88.45919232199338,
+      "theme": "Modern Township",
+      "themeBn": "আধুনিক টাউনশিপ",
+      "hours": "6 AM - 12 AM",
+      "transport": "New Town area",
+      "crowd": "high",
+      "accessible": true
+    },
+    {
+      "id": "baguiati-sporting",
+      "name": "Baguiati Sporting",
+      "nameBn": "বাগুইআটি স্পোর্টিং",
+      "type": "community",
+      "area": "Baguiati",
+      "areaBn": "বাগুইআটি",
+      "lat": 22.6300,
+      "lng": 88.4400,
+      "theme": "Sports Community",
+      "themeBn": "ক্রীড়া কমিউনিটি",
+      "hours": "6 AM - 11 PM",
+      "transport": "Baguiati area",
+      "crowd": "medium",
+      "accessible": false
+    },
+    {
+      "id": "dakshineswar-ramkrishna-sangha",
+      "name": "Dakshineswar Ramkrishna Sangha",
+      "nameBn": "দক্ষিণেশ্বর রামকৃষ্ণ সংঘ",
+      "type": "community",
+      "area": "Dakshineswar",
+      "areaBn": "দক্ষিণেশ্বর",
+      "lat": 22.6550,
+      "lng": 88.3580,
+      "theme": "Spiritual Community",
+      "themeBn": "আধ্যাত্মিক কমিউনিটি",
+      "hours": "5 AM - 10 PM",
+      "transport": "Dakshineswar Metro",
+      "crowd": "high",
+      "accessible": false
+    },
+    {
+      "id": "nager-bazaar-sarbojanin",
+      "name": "Nager Bazaar Sarbojanin",
+      "nameBn": "নগর বাজার সর্বজনীন",
+      "type": "community",
+      "area": "Nager Bazaar",
+      "areaBn": "নগর বাজার",
+      "lat": 22.605626765853383,
+      "lng": 88.37011305699241,
+      "theme": "Market Community",
+      "themeBn": "বাজার কমিউনিটি",
+      "hours": "6 AM - 11 PM",
+      "transport": "Nager Bazaar Metro",
+      "crowd": "medium",
+      "accessible": false
+    }
+  ],
+  "achievements": [
+    {
+      "id": "first-visit",
+      "name": "First Visit",
+      "nameBn": "প্রথম দর্শন",
+      "requirement": 1,
+      "icon": "fas fa-star",
+      "points": 10,
+      "description": "Visit your first pandal"
+    },
+    {
+      "id": "heritage-explorer",
+      "name": "Heritage Explorer",
+      "nameBn": "ঐতিহ্য অনুসন্ধানকারী",
+      "requirement": 3,
+      "icon": "fas fa-map-marked-alt",
+      "points": 25,
+      "description": "Visit 3 heritage pandals"
+    },
+    {
+      "id": "photo-enthusiast",
+      "name": "Photo Enthusiast",
+      "nameBn": "ছবি উৎসাহী",
+      "requirement": 5,
+      "icon": "fas fa-camera",
+      "points": 50,
+      "description": "Visit 5 different pandals"
+    },
+    {
+      "id": "route-master",
+      "name": "Route Master",
+      "nameBn": "রুট মাস্টার",
+      "requirement": 8,
+      "icon": "fas fa-route",
+      "points": 75,
+      "description": "Visit 8 pandals in one route"
+    },
+    {
+      "id": "cultural-ambassador",
+      "name": "Cultural Ambassador",
+      "nameBn": "সাংস্কৃতিক দূত",
+      "requirement": 15,
+      "icon": "fas fa-trophy",
+      "points": 150,
+      "description": "Visit 15 pandals across different categories"
+    },
+    {
+      "id": "pandal-champion",
+      "name": "Pandal Champion",
+      "nameBn": "পণ্ডেল চ্যাম্পিয়ন",
+      "requirement": 31,
+      "icon": "fas fa-crown",
+      "points": 300,
+      "description": "Visit all 31 pandals in the guide"
+    }
+  ],
+  "themes": {
+    "2024": {
+      "title": "Save Our Planet",
+      "description": "Environmental conservation and climate change awareness through traditional art.",
+      "details": "Pandals featured recycled materials, solar power, and eco-friendly decorations."
+    },
+    "2023": {
+      "title": "Unity in Diversity",
+      "description": "Celebrating India's multicultural heritage and unity.",
+      "details": "Showcased different states' cultures integrated with Bengali traditions."
+    },
+    "2022": {
+      "title": "Tribute to Healthcare Workers",
+      "description": "Honoring COVID-19 frontline warriors and medical professionals.",
+      "details": "Many pandals featured hospital themes and healthcare worker tributes."
+    },
+    "2021": {
+      "title": "Hope Amidst Crisis",
+      "description": "Representing resilience and hope during pandemic times.",
+      "details": "Smaller celebrations with focus on community support and solidarity."
+    },
+    "2020": {
+      "title": "Simplified Celebration",
+      "description": "COVID-19 restrictions led to smaller, community-focused celebrations.",
+      "details": "First year with major restrictions, virtual darshan became popular."
+    },
+    "2019": {
+      "title": "Bengali Heritage Revival",
+      "description": "Showcasing traditional Bengali art, culture, and mythology.",
+      "details": "Focus on preserving and promoting traditional Bengali craftsmanship."
+    }
+  },
+  "pujaDates2025": {
+    "september": {
+      "21": "Mahalaya",
+      "28": "Sasthi",
+      "29": "Saptami",
+      "30": "Astami"
+    },
+    "october": {
+      "1": "Navami",
+      "2": "Dashami"
+    }
+  },
+  "emergencyContacts": [
+    {
+      "service": "Police Emergency",
+      "number": "100",
+      "description": "For any emergency or security issues"
+    },
+    {
+      "service": "Fire Emergency",
+      "number": "101",
+      "description": "Fire department emergency services"
+    },
+    {
+      "service": "Medical Emergency",
+      "number": "102",
+      "description": "Ambulance and medical emergency services"
+    },
+    {
+      "service": "Tourist Helpline",
+      "number": "1363",
+      "description": "24x7 tourist assistance and information"
+    },
+    {
+      "service": "Kolkata Police Control Room",
+      "number": "033-2214-5185",
+      "description": "Kolkata Police main control room"
+    },
+    {
+      "service": "Women Helpline",
+      "number": "1091",
+      "description": "Emergency helpline for women in distress"
+    }
+  ],
+  "transportInfo": {
+    "metro": {
+      "name": "Kolkata Metro",
+      "website": "http://www.mtp.indianrailways.gov.in/",
+      "operatingHours": "6:30 AM - 9:45 PM",
+      "frequency": "Every 7-10 minutes",
+      "fare": "₹5 - ₹15"
+    },
+    "bus": {
+      "name": "WBTC Bus",
+      "operatingHours": "5:00 AM - 11:00 PM",
+      "fare": "₹7 - ₹20"
+    },
+    "taxi": {
+      "yellowTaxi": "Available 24/7, metered fare",
+      "appTaxi": "Ola, Uber available"
+    },
+    "autoRickshaw": {
+      "availability": "Limited in central Kolkata",
+      "fare": "Negotiable, typically ₹10-15/km"
+    }
+  },
+  "languageSupport": {
+    "supported": ["en", "bn"],
+    "default": "en",
+    "translations": {
+      "appTitle": {
+        "en": "Kolkata Durga Puja Guide 2025",
+        "bn": "কলকাতা দুর্গা পূজা গাইড ২০২৫"
+      },
+      "sections": {
+        "pandals": {
+          "en": "Pandals",
+          "bn": "পণ্ডেল"
+        },
+        "food": {
+          "en": "Food",
+          "bn": "খাবার"
+        },
+        "map": {
+          "en": "Map",
+          "bn": "মানচিত্র"
+        },
+        "progress": {
+          "en": "Progress",
+          "bn": "অগ্রগতি"
+        }
+      }
+    }
+  },
+  "appSettings": {
+    "defaultTheme": "light",
+    "defaultLanguage": "en",
+    "geolocationTimeout": 10000,
+    "mapZoomLevel": 12,
+    "notificationPermissions": true,
+    "offlineSupport": true
+  },
+  "manifest": {
+    "name": "Kolkata Durga Puja Guide 2025",
+    "short_name": "Puja Guide",
+    "description": "Complete Durga Puja festival companion for North Kolkata heritage route with interactive maps, pandal information, and cultural guide",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#8B0000",
+    "theme_color": "#DC143C",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en-US",
+    "categories": ["travel", "lifestyle", "entertainment"],
+    "icons": [
+      {
+        "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Ccircle cx='96' cy='96' r='96' fill='%23DC143C'/%3E%3Cpath d='M96 48c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48z' fill='%23FFD700'/%3E%3Ctext x='96' y='110' text-anchor='middle' font-size='40' fill='%23DC143C'%3E%F0%9F%95%89%3C/text%3E%3C/svg%3E",
+        "sizes": "192x192",
+        "type": "image/svg+xml",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='256' fill='%23DC143C'/%3E%3Cpath d='M256 128c-70.7 0-128 57.3-128 128s57.3 128 128 128 128-57.3 128-128-57.3-128-128-128z' fill='%23FFD700'/%3E%3Ctext x='256' y='290' text-anchor='middle' font-size='100' fill='%23DC143C'%3E%F0%9F%95%89%3C/text%3E%3C/svg%3E",
+        "sizes": "512x512",
+        "type": "image/svg+xml",
+        "purpose": "any maskable"
+      }
+    ],
+    "shortcuts": [
+      {
+        "name": "Find Nearby Pandals",
+        "short_name": "Nearby",
+        "description": "Find pandals near your location",
+        "url": "/?action=nearby",
+        "icons": [{ "src": "/android-chrome-96x96.png", "sizes": "96x96" }]
+      },
+      {
+        "name": "My Bookmarks",
+        "short_name": "Bookmarks",
+        "description": "View your bookmarked pandals",
+        "url": "/?action=bookmarks",
+        "icons": [{ "src": "/android-chrome-96x96.png", "sizes": "96x96" }]
+      },
+      {
+        "name": "Route Planner",
+        "short_name": "Routes",
+        "description": "Plan your pandal hopping route",
+        "url": "/?action=routes",
+        "icons": [{ "src": "/android-chrome-96x96.png", "sizes": "96x96" }]
+      },
+      {
+        "name": "Emergency Contacts",
+        "short_name": "Emergency",
+        "description": "Quick access to emergency numbers",
+        "url": "/?action=emergency",
+        "icons": [{ "src": "/android-chrome-96x96.png", "sizes": "96x96" }]
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'%3E%3Crect width='540' height='720' fill='%23fff8f0'/%3E%3Crect x='0' y='0' width='540' height='120' fill='%23DC143C'/%3E%3Ctext x='270' y='70' text-anchor='middle' font-size='24' fill='white'%3EKolkata Durga Puja Guide%3C/text%3E%3Crect x='20' y='140' width='500' height='100' rx='10' fill='white' stroke='%23e0e0e0'/%3E%3Ctext x='40' y='180' font-size='16' fill='%23333'%3ETala Prattoy%3C/text%3E%3Ctext x='40' y='200' font-size='12' fill='%23666'%3ETraditional Bengali Architecture%3C/text%3E%3Crect x='20' y='260' width='500' height='100' rx='10' fill='white' stroke='%23e0e0e0'/%3E%3Ctext x='40' y='300' font-size='16' fill='%23333'%3EKumartuli Sarbojanin%3C/text%3E%3Ctext x='40' y='320' font-size='12' fill='%23666'%3EClay Artist Heritage%3C/text%3E%3C/svg%3E",
+        "sizes": "540x720",
+        "type": "image/svg+xml",
+        "form_factor": "narrow",
+        "label": "Pandal List View"
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 540'%3E%3Crect width='720' height='540' fill='%23f0f8ff'/%3E%3Crect x='0' y='0' width='720' height='80' fill='%23DC143C'/%3E%3Ctext x='360' y='50' text-anchor='middle' font-size='20' fill='white'%3EInteractive Map%3C/text%3E%3Crect x='20' y='100' width='680' height='420' rx='10' fill='%23e8f4fd' stroke='%23666'/%3E%3Ccircle cx='200' cy='200' r='8' fill='%23FF6B35'/%3E%3Ccircle cx='400' cy='300' r='8' fill='%2300B894'/%3E%3Ccircle cx='600' cy='250' r='8' fill='%23E17055'/%3E%3Ctext x='360' y='300' text-anchor='middle' font-size='14' fill='%23666'%3EPandal Locations%3C/text%3E%3C/svg%3E",
+        "sizes": "720x540",
+        "type": "image/svg+xml",
+        "form_factor": "wide",
+        "label": "Interactive Map View"
+      }
+      
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "dir": "ltr",
+    "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+    "edge_side_panel": {
+      "preferred_width": 400
+    },
+    "launch_handler": {
+      "client_mode": "navigate-existing"
+    },
+    "protocol_handlers": [
+      {
+        "protocol": "web+puja",
+        "url": "/?pandal=%s"
+      }
+    ],
+    "share_target": {
+      "action": "/share",
+      "method": "POST",
+      "enctype": "multipart/form-data",
+      "params": {
+        "title": "title",
+        "text": "text",
+        "url": "url",
+        "files": [
+          {
+            "name": "photos",
+            "accept": ["image/*"]
+            
+          }
+        ]
+      }
+    }
+  }
+}
