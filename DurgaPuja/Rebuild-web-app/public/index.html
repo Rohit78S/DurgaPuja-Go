@@ -1,1 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolkata Durga Puja Guide 2025</title>
 
+    <!-- PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Puja Guide">
+    <meta name="application-name" content="Puja Guide">
+    <meta name="theme-color" content="#DC143C">
+    <meta name="background_color" content="#8B0000">
+
+    <!-- App Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+
+    <!-- Microsoft Tile -->
+    <meta name="msapplication-TileImage" content="https://uploads.onecompiler.io/43c8gtkh3/43x6ex7tm/4f69dbc3d7d02b21fb79d7a13e2dec0a.jpg">
+    <meta name="msapplication-TileColor" content="#DC143C">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="update-styles.css">
+    <link rel="stylesheet" href="notification-styles.css">
+</head>
+<script src="smart-recommendations.js"></script>
+<body data-theme="light">
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="welcome-box">
+        <h1 class="puja-title" data-en="Shubho Durga Puja" data-bn="শুভ দুর্গাপূজা">Shubho Durga Puja</h1>
+        <p class="puja-subtitle" data-en="Sharadiya Durga Puja celebration guide for North Kolkata" data-bn="শারদীয়া দুর্গাপূজার উদযাপন গাইড উত্তর কলকাতার জন্য">
+        <p class="puja-subtitle" data-en="ꉂ(˵˃ ᗜ ˂˵)(˶˃⤙˂˶)" data-bn="ꉂ(˵˃ ᗜ ˂˵)(˶˃⤙˂˶)"></p>
+        </p>
+    </div>
+</div>
+
+
+<!-- Enhanced Side Menu with Login Button -->
+<div class="side-menu" id="sideMenu">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h3 data-en="Menu" data-bn="মেনু">Menu</h3>
+        <button onclick="toggleSideMenu()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-primary);">&times;</button>
+    </div>
+
+    <!-- Login/User Section - Add this after the header -->
+    <div class="menu-user-section" id="userSection">
+        <!-- For Guest Users -->
+        <div class="menu-item login-menu-item" id="loginMenuItem" onclick="redirectToLogin()">
+            <i class="fas fa-sign-in-alt"></i>
+            <span data-en="Sign In / Register" data-bn="সাইন ইন / রেজিস্টার">Sign In / Register</span>
+            <div class="login-badge">
+                <span data-en="Get Premium Features" data-bn="প্রিমিয়াম ফিচার পান">Get Premium Features</span>
+            </div>
+        </div>
+
+        <!-- For Logged In Users -->
+        <div class="menu-item user-profile-item" id="userProfileItem" style="display: none;" onclick="showUserProfile()">
+            <div class="user-avatar" id="userAvatar">
+                <img id="userProfilePic" src="" alt="Profile" style="display: none;">
+                <div class="avatar-fallback" id="avatarFallback">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            <div class="user-info">
+                <span class="user-name" id="userName">User Name</span>
+                <span class="user-email" id="userEmail">user@example.com</span>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <!-- Logout Option for Logged In Users -->
+        <div class="menu-item logout-menu-item" id="logoutMenuItem" style="display: none;" onclick="handleLogout()">
+            <i class="fas fa-sign-out-alt"></i>
+            <span data-en="Sign Out" data-bn="সাইন আউট">Sign Out</span>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="menu-divider"></div>
+
+    <!-- Existing Menu Items -->
+    <div class="menu-item" onclick="showBookmarks()">
+        <i class="fas fa-heart"></i>
+        <span data-en="Bookmarked Pandals" data-bn="পছন্দের পণ্ডেল">Bookmarked Pandals</span>
+    </div>
+    <div class="menu-item" onclick="showMyRoute()">
+        <i class="fas fa-route"></i>
+        <span data-en="My Routes" data-bn="আমার রুট">My Routes</span>
+    </div>
+    <div class="menu-item" onclick="showWeatherInfo()">
+        <i class="fas fa-cloud-sun"></i>
+        <span data-en="Weather & Forecast" data-bn="আবহাওয়া ও পূর্বাভাস">Weather & Forecast</span>
+    </div>
+    <div class="menu-item" onclick="showCalendar()">
+        <i class="fas fa-calendar"></i>
+        <span data-en="Puja Calendar 2025" data-bn="পূজা ক্যালেন্ডার ২০২৫">Puja Calendar 2025</span>
+    </div>
+    <div class="menu-item" onclick="showThemeArchive()">
+        <i class="fas fa-archive"></i>
+        <span data-en="Theme Archive" data-bn="থিম আর্কাইভ">Theme Archive</span>
+    </div>
+    <div class="menu-item" onclick="showARVRFeatures()">
+        <i class="fas fa-vr-cardboard"></i>
+        <span data-en="AR/VR Experience" data-bn="এআর/ভিআর অভিজ্ঞতা">AR/VR Experience</span>
+    </div>
+    <div class="menu-item" onclick="showBadges()">
+        <i class="fas fa-trophy"></i>
+        <span data-en="Achievement Badges" data-bn="অর্জনের ব্যাজ">Achievement Badges</span>
+    </div>
+    <div class="menu-item" onclick="shareApp()">
+        <i class="fas fa-share"></i>
+        <span data-en="Share App" data-bn="অ্যাপ শেয়ার করুন">Share App</span>
+    </div>
+    <div class="menu-item" onclick="showStepCounter()">
+        <i class="fas fa-walking"></i>
+        <span data-en="Step Counter" data-bn="পদক্ষেপ গণনা">Step Counter</span>
+    </div>
+    <div class="menu-item" onclick="openGoogleReviewForm()">
+        <i class="fas fa-star"></i>
+        <span data-en="Rate & Review" data-bn="রেটিং ও রিভিউ">Rate & Review</span>
+    </div>
+
+    <div class="menu-item" onclick="clearAllData()">
+        <i class="fas fa-trash"></i>
+        <span data-en="Clear All Data" data-bn="সব ডেটা মুছে ফেলুন">Clear All Data</span>
+    </div>
+</div>
+
+<!-- Header -->
+<div class="header">
+    <div class="header-top">
+        <div class="logo-section">
+
+            <div>
+                <h1 data-en="Kolkata Durga Puja Guide 2025" data-bn="কলকাতা দুর্গাপূজা গাইড ২০২৫">Kolkata Durga Puja Guide 2025</h1>
+                <p data-en="শুভ দুর্গোৎসব | North Kolkata Heritage Route" data-bn="শুভ দুর্গোৎসব | উত্তর কলকাতা ঐতিহ্য রুট">শুভ দুর্গোৎসব | North Kolkata Heritage Route</p>
+            </div>
+        </div>
+        <div class="header-controls">
+            <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <button class="lang-toggle" onclick="toggleLanguage()" title="Change Language">
+                <span id="langText">বাং</span>
+            </button>
+            <button class="menu-btn" onclick="toggleSideMenu()" title="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="nav-tabs">
+        <button class="nav-tab active" onclick="showSection('pandals')">
+            <i class="fas fa-building"></i>
+            <span data-en="Pandals" data-bn="পণ্ডেল">Pandals</span>
+        </button>
+        <button class="nav-tab" onclick="showSection('map')">
+            <i class="fas fa-map"></i>
+            <span data-en="Map & Route" data-bn="মানচিত্র ও রুট">Map & Route</span>
+        </button>
+        <button class="nav-tab" onclick="showSection('emergency')">
+            <i class="fas fa-shield-alt"></i>
+            <span data-en="Safety" data-bn="নিরাপত্তা">Safety</span>
+        </button>
+        <button class="nav-tab" onclick="showSection('food')">
+            <i class="fas fa-utensils"></i>
+            <span data-en="Food & Culture" data-bn="খাবার ও সংস্কৃতি">Food & Culture</span>
+        </button>
+        <button class="nav-tab" onclick="showSection('groups')">
+            <i class="fas fa-users"></i>
+            <span data-en="My Group" data-bn="আমার দল">My Group</span>
+        </button>
+    </div>
+</div>
+<div id="notificationRequest" class="notification-banner" style="display: none;">
+    <div class="notification-banner-content">
+        <div class="notification-banner-text">
+            <i class="fas fa-bell"></i>
+            Stay updated with Durga Puja dates, app updates, and GPS tracking alerts!
+        </div>
+        <div class="notification-banner-actions">
+            <button class="banner-btn primary" onclick="enableNotifications()">Enable</button>
+            <button class="banner-btn" onclick="dismissNotifications()">Not Now</button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- Pandals Section -->
+    <div id="pandals" class="content-section active">
+        <!-- Replace the existing puja-dates section in your main-app.html with this enhanced version -->
+        <div class="puja-dates">
+            <h3 data-en=" Durga Puja 2025 Dates" data-bn=" দুর্গাপূজা ২০২৫ তারিখ"> Durga Puja 2025 Dates</h3>
+
+            <div class="puja-dates-grid">
+                <!-- All dates with consistent styling -->
+                <div class="puja-date-item">
+                    <div class="date-name" data-en="Mahalaya" data-bn="মহালয়া">Mahalaya</div>
+                    <div class="date-value" data-en="Sept 21, 2025" data-bn="২১ সেপ্টেম্বর, ২০২৫">Sept 21, 2025</div>
+                </div>
+
+                <div class="puja-date-item">
+                    <div class="date-name" data-en="Sasthi" data-bn="ষষ্ঠী">Sasthi</div>
+                    <div class="date-value" data-en="Sept 28, 2025" data-bn="২৮ সেপ্টেম্বর, ২০২৫">Sept 28, 2025</div>
+                </div>
+
+                <div class="puja-date-item">
+                    <div class="date-name" data-en="Saptami" data-bn="সপ্তমী">Saptami</div>
+                    <div class="date-value" data-en="Sept 29, 2025" data-bn="২৯ সেপ্টেম্বর, ২০২৫">Sept 29, 2025</div>
+                </div>
+
+                <div class="puja-date-item">
+                    <div class="date-name" data-en="Astami" data-bn="অষ্টমী">Astami</div>
+                    <div class="date-value" data-en="Sept 30, 2025" data-bn="৩০ সেপ্টেম্বর, ২০২৫">Sept 30, 2025</div>
+                </div>
+
+                <div class="puja-date-item">
+                    <div class="date-name" data-en="Navami" data-bn="নবমী">Navami</div>
+                    <div class="date-value" data-en="Oct 1, 2025" data-bn="১ অক্টোবর, ২০২৫">Oct 1, 2025</div>
+                </div>
+
+                <div class="puja-date-item">
+                    <div class="date-name" data-en="Dashami" data-bn="দশমী">Dashami</div>
+                    <div class="date-value" data-en="Oct 2, 2025" data-bn="২ অক্টোবর, ২০২৫">Oct 2, 2025</div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Container -->
+        <div class="search-container">
+            <input type="text" class="search-input" data-placeholder-en="Search pandals by name, area, or theme..." data-placeholder-bn="নাম, এলাকা বা থিম দিয়ে পণ্ডেল খুঁজুন..." placeholder="Search pandals by name, area, or theme..." id="searchInput">
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterPandals('all')" data-en="All" data-bn="সব">All</button>
+                <button class="filter-btn" onclick="filterPandals('heritage')" data-en="Heritage" data-bn="ঐতিহ্য">Heritage</button>
+                <button class="filter-btn" onclick="filterPandals('theme')" data-en="Theme" data-bn="থিম">Theme</button>
+                <button class="filter-btn" onclick="filterPandals('community')" data-en="Community" data-bn="কমিউনিটি">Community</button>
+                <button class="filter-btn" onclick="filterPandals('accessible')" data-en="Accessible" data-bn="প্রবেশযোগ্য">Accessible</button>
+                <button class="filter-btn" onclick="filterPandals('bookmarked')" data-en="Bookmarked" data-bn="বুকমার্ক">Bookmarked</button>
+            </div>
+        </div>
+
+        <!-- Route Progress -->
+        <!-- Replace the existing route-container section in your main-app.html with this enhanced version -->
+        <div class="route-container">
+            <h3 data-en="Your Route Progress" data-bn="আপনার রুট অগ্রগতি">Your Route Progress</h3>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="routeProgressBar"></div>
+            </div>
+
+            <div class="progress-text" id="progressText">
+                <span data-en="0 of 31 pandals visited (0% Complete)" data-bn="৩১টি পণ্ডেলের মধ্যে ০টি পরিদর্শিত (০% সম্পূর্ণ)">0 of 31 pandals visited (0% Complete)</span>
+            </div>
+
+            <div>
+                <button class="btn" onclick="optimizeRoute()">
+                    <i class="fas fa-route"></i>
+                    <span data-en="Optimize My Route" data-bn="আমার রুট অপটিমাইজ করুন">Optimize My Route</span>
+                </button>
+                <button class="btn" onclick="trackRoute()">
+                    <i class="fas fa-location-arrow"></i>
+                    <span data-en="Start GPS Tracking" data-bn="জিপিএস ট্র্যাকিং শুরু করুন">Start GPS Tracking</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats-section">
+            <h4 data-en="Pandal Statistics" data-bn="পণ্ডেলের পরিসংখ্যান">Pandal Statistics</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-top: 0.5rem;">
+                <div class="stat-item">
+                    <div class="stat-number">31</div>
+                    <div class="stat-label" data-en="Total Pandals" data-bn="মোট পণ্ডেল">Total Pandals</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="visitedStat">0</div>
+                    <div class="stat-label" data-en="Visited" data-bn="পরিদর্শিত">Visited</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="bookmarkedStat">0</div>
+                    <div class="stat-label" data-en="Bookmarked" data-bn="বুকমার্ক">Bookmarked</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="userPointsStat">0</div>
+                    <div class="stat-label" data-en="Points Earned" data-bn="অর্জিত পয়েন্ট">Points Earned</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pandal Grid -->
+        <div class="pandal-grid" id="pandalGrid">
+            <!-- Pandals will be loaded here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div id="map" class="content-section">
+        <h2 data-en=" Interactive Pandal Map" data-bn=" ইন্টারঅ্যাক্টিভ পণ্ডেল মানচিত্র"> Interactive Pandal Map</h2>
+
+        <div class="route-container">
+            <h3 data-en=" Heritage Route Options" data-bn=" ঐতিহ্য রুট বিকল্প"> Heritage Route Options</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+                <button class="btn" onclick="showRouteType('heritage')">
+                    <i class="fas fa-landmark"></i>
+                    <span data-en="Heritage Route" data-bn="ঐতিহ্য রুট">Heritage Route</span>
+                </button>
+                <button class="btn" onclick="showRouteType('theme')">
+                    <i class="fas fa-palette"></i>
+                    <span data-en="Theme Route" data-bn="থিম রুট">Theme Route</span>
+                </button>
+                <button class="btn" onclick="showRouteType('community')">
+                    <i class="fas fa-users"></i>
+                    <span data-en="Community Route" data-bn="কমিউনিটি রুট">Community Route</span>
+                </button>
+                <button class="btn" onclick="getCurrentLocation()">
+                    <i class="fas fa-crosshairs"></i>
+                    <span data-en="Find Nearby" data-bn="কাছাকাছি খুঁজুন">Find Nearby</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mapContainer"></div>
+    </div>
+
+    <!-- Emergency Section -->
+    <div id="emergency" class="content-section">
+        <h2 data-en=" Emergency & Safety" data-bn=" জরুরি ও নিরাপত্তা"> Emergency & Safety</h2>
+
+        <div class="emergency-grid">
+            <div class="emergency-card police" onclick="callEmergency('100', 'Police')">
+                <h3 data-en=" Police" data-bn=" পুলিশ"> Police</h3>
+                <div class="emergency-number">100</div>
+                <p data-en="24/7 Emergency Helpline" data-bn="২৪/৭ জরুরি হেল্পলাইন">24/7 Emergency Helpline</p>
+                <button class="btn" onclick="event.stopPropagation(); window.location.href='tel:100'">
+                    <i class="fas fa-phone"></i>
+                    <span data-en="Call Now" data-bn="এখনই কল করুন">Call Now</span>
+                </button>
+            </div>
+
+            <div class="emergency-card ambulance" onclick="callEmergency('102', 'Ambulance')">
+                <h3 data-en=" Ambulance" data-bn=" অ্যাম্বুলেন্স"> Ambulance</h3>
+                <div class="emergency-number">102</div>
+                <p data-en="Medical Emergency" data-bn="চিকিৎসা জরুরি">Medical Emergency</p>
+                <button class="btn" onclick="event.stopPropagation(); window.location.href='tel:102'">
+                    <i class="fas fa-phone"></i>
+                    <span data-en="Call Now" data-bn="এখনই কল করুন">Call Now</span>
+                </button>
+            </div>
+
+            <div class="emergency-card fire" onclick="callEmergency('101', 'Fire Department')">
+                <h3 data-en=" Fire" data-bn=" ফায়ার"> Fire</h3>
+                <div class="emergency-number">101</div>
+                <p data-en="Fire Emergency" data-bn="অগ্নিকাণ্ড জরুরি">Fire Emergency</p>
+                <button class="btn" onclick="event.stopPropagation(); window.location.href='tel:101'">
+                    <i class="fas fa-phone"></i>
+                    <span data-en="Call Now" data-bn="এখনই কল করুন">Call Now</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Safety Guidelines with Animated GIF Background -->
+        <div class="safety-guidelines-container">
+            <h3 data-en="🛡 Safety Guidelines" data-bn="🛡 নিরাপত্তা নির্দেশিকা">🛡 Safety Guidelines</h3>
+
+            <div class="detail-item">
+                <span class="detail-icon">👥</span>
+                <span data-en="Stay with your group in crowds" data-bn="ভিড়ের মধ্যে আপনার দলের সাথে থাকুন">Stay with your group in crowds</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="detail-icon"> </span>
+                <span data-en="Stay hydrated and carry water" data-bn="হাইড্রেটেড থাকুন এবং পানি বহন করুন">Stay hydrated and carry water</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="detail-icon"> </span>
+                <span data-en="Keep phone charged and share location" data-bn="ফোন চার্জ রাখুন এবং অবস্থান শেয়ার করুন">Keep phone charged and share location</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Food & Culture Section -->
+    <div id="food" class="content-section">
+        <h2 data-en=" Food & Culture Guide" data-bn=" খাদ্য ও সংস্কৃতি গাইড"> Food & Culture Guide</h2>
+
+        <!-- Durga Puja Dates in Food Section -->
+        <div class="puja-dates">
+            <h3 data-en=" Real-time Pandal Tracking" data-bn=" রিয়েল-টাইম পণ্ডেল ট্র্যাকিং"> Real-time Pandal Tracking</h3>
+            <p data-en="Track live crowds, weather, and best visiting times" data-bn="লাইভ ভিড়, আবহাওয়া এবং সেরা দেখার সময় ট্র্যাক করুন">Track live crowds, weather, and best visiting times</p>
+            <div style="margin-top: 1rem;">
+                <button class="btn" onclick="trackRoute()">
+                    <i class="fas fa-satellite-dish"></i>
+                    <span data-en="Start Live Tracking" data-bn="লাইভ ট্র্যাকিং শুরু করুন">Start Live Tracking</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search food items..." id="foodSearchInput">
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterFood('all')" data-en="All Food" data-bn="সব খাবার">All Food</button>
+                <button class="filter-btn" onclick="filterFood('street')" data-en="Street Food" data-bn="রাস্তার খাবার">Street Food</button>
+                <button class="filter-btn" onclick="filterFood('sweets')" data-en="Sweets" data-bn="মিষ্টি">Sweets</button>
+                <button class="filter-btn" onclick="filterFood('traditional')" data-en="Traditional" data-bn="ঐতিহ্যবাহী">Traditional</button>
+                <button class="filter-btn" onclick="filterFood('restaurants')" data-en="Restaurants" data-bn="রেস্তোরাঁ">Restaurants</button>
+            </div>
+        </div>
+
+        <div class="food-grid" id="foodGrid">
+            <!-- Food items will be loaded here by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<!-- Weather Widget -->
+<div class="weather-widget" id="weatherWidget">
+    <button class="weather-refresh" onclick="refreshWeatherData()" title="Refresh Weather">
+        <i class="fas fa-sync-alt"></i>
+    </button>
+    <button class="weather-close" onclick="hideWeatherWidget()">&times;</button>
+
+    <div id="weatherContent">
+        <!-- Current Weather Section -->
+        <div class="weather-current" id="weatherCurrentSection">
+            <h4 data-en="Weather in Kolkata" data-bn="কলকাতার আবহাওয়া">Weather in Kolkata</h4>
+            <div class="weather-temp" id="currentTemp">--°C</div>
+            <div id="currentCondition">Loading...</div>
+
+            <div class="weather-details">
+                <div class="weather-detail-item">
+                    <i class="fas fa-thermometer-half"></i>
+                    <span data-en="Feels like" data-bn="মনে হচ্ছে">Feels like</span>:
+                    <span id="feelsLike">--°C</span>
+                </div>
+                <div class="weather-detail-item">
+                    <i class="fas fa-tint"></i>
+                    <span data-en="Humidity" data-bn="আর্দ্রতা">Humidity</span>:
+                    <span id="humidity">--%</span>
+                </div>
+                <div class="weather-detail-item">
+                    <i class="fas fa-wind"></i>
+                    <span data-en="Wind" data-bn="বাতাস">Wind</span>:
+                    <span id="windSpeed">-- m/s</span>
+                </div>
+                <div class="weather-detail-item">
+                    <i class="fas fa-sun"></i>
+                    <span data-en="UV Index" data-bn="ইউভি ইনডেক্স">UV Index</span>:
+                    <span id="uvIndex">--</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forecast Section -->
+        <div class="weather-forecast">
+            <h4 data-en="5-Day Forecast" data-bn="৫ দিনের পূর্বাভাস">5-Day Forecast</h4>
+            <div id="forecastGrid">
+                <!-- Forecast will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Weather Tips -->
+        <div class="weather-tips">
+            <p id="weatherTip">
+                <i class="fas fa-lightbulb"></i>
+                <span data-en="Best time to visit pandals: Evening (4-8 PM)" data-bn="প্যান্ডেল দেখার সেরা সময়: সন্ধ্যা (৪-৮ টা)">
+                    Best time to visit pandals: Evening (4-8 PM)
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Enhanced Calendar Widget -->
+<div class="calendar-widget" id="calendarWidget">
+    <button class="calendar-close" onclick="hideCalendarWidget()">&times;</button>
+
+    <h3 data-en="Durga Puja Calendar 2025" data-bn="দুর্গাপূজা ক্যালেন্ডার ২০২৫">
+        Durga Puja Calendar 2025
+    </h3>
+
+    <!-- Calendar Navigation Container -->
+    <div class="calendar-container" style="text-align: center; margin-bottom: 1rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <button id="prevBtn" onclick="changeMonth(-1)" style="width: auto; padding: 0.5rem 1rem;">‹</button>
+            <h4 id="monthYear">October 2025</h4>
+            <button id="nextBtn" onclick="changeMonth(1)" style="width: auto; padding: 0.5rem 1rem;">›</button>
+        </div>
+
+        <p id="currentDateTime"></p>
+
+        <button onclick="goToToday()" class="btn" style="margin-bottom: 1rem; width: auto; padding: 0.5rem 1rem;">
+            <span data-en="Go to Today" data-bn="আজকের দিনে যান">Go to Today</span>
+        </button>
+    </div>
+
+    <!-- Calendar Header (Days of Week) -->
+    <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem; margin-bottom: 1rem; font-weight: bold; text-align: center; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-radius: 15px; padding: 1rem; color: var(--text-primary); border: 1px solid rgba(255, 255, 255, 0.3);">
+        <div data-en="Sun" data-bn="রবি">Sun</div>
+        <div data-en="Mon" data-bn="সোম">Mon</div>
+        <div data-en="Tue" data-bn="মঙ্গল">Tue</div>
+        <div data-en="Wed" data-bn="বুধ">Wed</div>
+        <div data-en="Thu" data-bn="বৃহঃ">Thu</div>
+        <div data-en="Fri" data-bn="শুক্র">Fri</div>
+        <div data-en="Sat" data-bn="শনি">Sat</div>
+    </div>
+
+    <!-- Calendar Grid -->
+    <div class="calendar-grid" id="calendarGrid">
+        <!-- Calendar days will be dynamically loaded here -->
+    </div>
+
+    <!-- Legend -->
+    <div style="margin-top: 1rem; text-align: center;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 15px; height: 15px; background: linear-gradient(135deg, var(--gold), var(--marigold)); border-radius: 3px; box-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);"></div>
+                <span style="font-size: 0.9rem; font-weight: 500;" data-en="Puja Days" data-bn="পূজার দিন">Puja Days</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 15px; height: 15px; background: var(--primary-color); border-radius: 3px; box-shadow: 0 2px 4px rgba(139, 0, 0, 0.3);"></div>
+                <span style="font-size: 0.9rem; font-weight: 500;" data-en="Today" data-bn="আজ">Today</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 15px; height: 15px; background: var(--border-color); border-radius: 3px; opacity: 0.6;"></div>
+                <span style="font-size: 0.9rem; font-weight: 500;" data-en="Other Month" data-bn="অন্য মাস">Other Month</span>
+            </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.2);">
+            <p data-en="Click on any date to view puja details" data-bn="পূজার বিবরণ দেখতে যেকোনো তারিখে ক্লিক করুন">
+                Click on any date to view puja details
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Optional: Background Overlay (for better modal effect) -->
+<div class="calendar-overlay" id="calendarOverlay" onclick="hideCalendarWidget()" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1001;
+    display: none;
+    transition: all 0.3s ease;
+"></div>
+
+<!-- Theme Archive Modal -->
+<div class="modal" id="themeArchiveModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('themeArchiveModal')">&times;</button>
+        <h2 data-en="Theme Archive (2019-2024)" data-bn="থিম আর্কাইভ (২০১৯-২০২৪)">Theme Archive (2019-2024)</h2>
+        <div class="theme-archive" id="themeArchiveGrid">
+            <div class="theme-card" onclick="showThemeDetails(2024)">
+                <div class="theme-year">2024</div>
+                <div class="theme-image env-conservation">
+                    <i class="fas fa-leaf" style="font-size: 2rem;"></i>
+                    <div>Environmental Conservation</div>
+                </div>
+                <h4 data-en="Theme: Save Our Planet" data-bn="থিম: আমাদের পৃথিবী রক্ষা করুন">Theme: Save Our Planet</h4>
+                <p data-en="Focused on environmental awareness and climate change" data-bn="পরিবেশ সচেতনতা এবং জলবায়ু পরিবর্তনের উপর দৃষ্টি নিবদ্ধ">Focused on environmental awareness and climate change</p>
+            </div>
+
+            <div class="theme-card" onclick="showThemeDetails(2023)">
+                <div class="theme-year">2023</div>
+                <div class="theme-image unity-diversity">
+                    <i class="fas fa-hands-helping" style="font-size: 2rem;"></i>
+                    <div>Unity & Diversity</div>
+                </div>
+                <h4 data-en="Theme: Unity in Diversity" data-bn="থিম: বৈচিত্র্যের মধ্যে ঐক্য">Theme: Unity in Diversity</h4>
+                <p data-en="Celebrating India's cultural diversity and unity" data-bn="ভারতের সাংস্কৃতিক বৈচিত্র্য এবং ঐক্য উদযাপন">Celebrating India's cultural diversity and unity</p>
+            </div>
+
+            <div class="theme-card" onclick="showThemeDetails(2022)">
+                <div class="theme-year">2022</div>
+                <div class="theme-image healthcare-heroes">
+                    <i class="fas fa-user-md" style="font-size: 2rem;"></i>
+                    <div>Healthcare Heroes</div>
+                </div>
+                <h4 data-en="Theme: Tribute to Healthcare Workers" data-bn="থিম: স্বাস্থ্যকর্মীদের প্রতি শ্রদ্ধাঞ্জলি">Theme: Tribute to Healthcare Workers</h4>
+                <p data-en="Honoring COVID-19 frontline warriors and medical professionals" data-bn="কোভিড-১৯ সামনের সারির যোদ্ধা এবং চিকিৎসা পেশাদারদের সম্মানিত করা">Honoring COVID-19 frontline warriors and medical professionals</p>
+            </div>
+
+            <div class="theme-card" onclick="showThemeDetails(2021)">
+                <div class="theme-year">2021</div>
+                <div class="theme-image hope-crisis">
+                    <i class="fas fa-globe-asia" style="font-size: 2rem;"></i>
+                    <div>Global Pandemic</div>
+                </div>
+                <h4 data-en="Theme: Hope Amidst Crisis" data-bn="থিম: সংকটের মধ্যে আশা">Theme: Hope Amidst Crisis</h4>
+                <p data-en="Representing resilience and hope during pandemic times" data-bn="মহামারীর সময়ে স্থিতিস্থাপকতা এবং আশার প্রতিনিধিত্ব">Representing resilience and hope during pandemic times</p>
+            </div>
+
+            <div class="theme-card" onclick="showThemeDetails(2020)">
+                <div class="theme-year">2020</div>
+                <div class="theme-image simplified-celebration">
+                    <i class="fas fa-mask" style="font-size: 2rem;"></i>
+                    <div>Limited Celebration</div>
+                </div>
+                <h4 data-en="Theme: Simplified Celebration" data-bn="থিম: সরলীকৃত উৎসব">Theme: Simplified Celebration</h4>
+                <p data-en="COVID-19 restrictions led to smaller, community-focused celebrations" data-bn="কোভিড-১৯ বিধিনিষেধের কারণে ছোট, সম্প্রদায়-কেন্দ্রিক উৎসব">COVID-19 restrictions led to smaller, community-focused celebrations</p>
+            </div>
+
+            <div class="theme-card" onclick="showThemeDetails(2019)">
+                <div class="theme-year">2019</div>
+                <div class="theme-image heritage-revival">
+                    <i class="fas fa-tree" style="font-size: 2rem;"></i>
+                    <div>Traditional Heritage</div>
+                </div>
+                <h4 data-en="Theme: Bengali Heritage Revival" data-bn="থিম: বাঙালি ঐতিহ্য পুনরুজ্জীবন">Theme: Bengali Heritage Revival</h4>
+                <p data-en="Showcasing traditional Bengali art, culture, and mythology" data-bn="ঐতিহ্যবাহী বাঙালি শিল্প, সংস্কৃতি এবং পুরাণ প্রদর্শন">Showcasing traditional Bengali art, culture, and mythology</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Theme Details Modal -->
+<div class="modal" id="themeDetailsModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('themeDetailsModal')">&times;</button>
+        <div id="themeDetailsContent">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </div>
+</div>
+
+<!-- AR/VR Features Modal -->
+<div class="modal" id="arvrModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('arvrModal')">&times;</button>
+        <h2 data-en="AR/VR Experience" data-bn="এআর/ভিআর অভিজ্ঞতা">AR/VR Experience</h2>
+        <div class="ar-feature">
+            <h3 data-en=" AR Pandal Finder" data-bn=" এআর পণ্ডেল খোঁজক"> AR Pandal Finder</h3>
+            <p data-en="Point your camera to discover nearby pandals with AR overlay" data-bn="এআর ওভারলে দিয়ে কাছাকাছি পণ্ডেল আবিষ্কার করতে ক্যামেরা নির্দেশ করুন">Point your camera to discover nearby pandals with AR overlay</p>
+            <button class="btn" onclick="startARExperience()">
+                <i class="fas fa-camera"></i>
+                <span data-en="Start AR Finder" data-bn="এআর খোঁজক শুরু করুন">Start AR Finder</span>
+            </button>
+        </div>
+        <div class="ar-feature">
+            <h3 data-en=" VR Pandal Experience" data-bn=" ভিআর পণ্ডেল অভিজ্ঞতা"> VR Pandal Experience</h3>
+            <p data-en="Virtual tour of famous pandals from your home" data-bn="ঘর থেকেই বিখ্যাত পণ্ডেলের ভার্চুয়াল ট্যুর">Virtual tour of famous pandals from your home</p>
+            <button class="btn" onclick="startVRExperience()">
+                <i class="fas fa-vr-cardboard"></i>
+                <span data-en="Start VR Tour" data-bn="ভিআর ট্যুর শুরু করুন">Start VR Tour</span>
+            </button>
+        </div>
+        <div class="ar-feature">
+            <h3 data-en=" Selfie Wall" data-bn=" সেলফি ওয়াল"> Selfie Wall</h3>
+            <p data-en="AR filters and frames for perfect puja selfies" data-bn="নিখুঁত পূজা সেলফির জন্য এআর ফিল্টার এবং ফ্রেম">AR filters and frames for perfect puja selfies</p>
+            <button class="btn" onclick="openSelfieWall()">
+                <i class="fas fa-camera-retro"></i>
+                <span data-en="Open Selfie Wall" data-bn="সেলফি ওয়াল খুলুন">Open Selfie Wall</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Routes Modal -->
+<div class="modal" id="routesModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('routesModal')">&times;</button>
+        <h2 data-en="My Routes" data-bn="আমার রুট">My Routes</h2>
+        <div style="margin-bottom: 1rem;">
+            <button class="btn" onclick="createNewRoute()">
+                <i class="fas fa-plus"></i>
+                <span data-en="Create New Route" data-bn="নতুন রুট তৈরি করুন">Create New Route</span>
+            </button>
+            <button class="btn" onclick="optimizeRoute()">
+                <i class="fas fa-route"></i>
+                <span data-en="Optimize Route" data-bn="রুট অপটিমাইজ করুন">Optimize Route</span>
+            </button>
+        </div>
+        <div id="savedRoutes">
+            <!-- Routes will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<!-- Badges Modal -->
+<div class="modal" id="badgesModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('badgesModal')">&times;</button>
+        <h2 data-en="Achievement Badges" data-bn="অর্জনের ব্যাজ">Achievement Badges</h2>
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h3 id="userPoints" data-en="Total Points: 0" data-bn="মোট পয়েন্ট: ০">Total Points: 0</h3>
+            <div class="progress-container">
+                <div class="progress-bar" id="badgeProgressBar"></div>
+            </div>
+            <p id="nextBadge" data-en="Next Badge: First Visit (Visit 1 pandal)" data-bn="পরবর্তী ব্যাজ: প্রথম দর্শন (১টি পণ্ডেল দেখুন)">Next Badge: First Visit (Visit 1 pandal)</p>
+        </div>
+        <div class="badge-container" id="badgeContainer">
+            <!-- Badges will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<!-- Floating Action Button -->
+<button class="fab" onclick="showBookmarks()" title="Bookmarked Pandals">
+    ❤️
+</button>
+
+<!-- Step Counter Modal -->
+<div class="modal" id="stepCounterModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('stepCounterModal')">&times;</button>
+        <h2 data-en="Step Counter & Health" data-bn="পদক্ষেপ গণনা ও স্বাস্থ্য">Step Counter & Health</h2>
+
+        <div class="step-dashboard">
+            <div class="step-main-counter">
+                <div class="step-count-display">
+                    <span id="todaySteps">0</span>
+                    <span class="step-label" data-en="Steps Today" data-bn="আজকের পদক্ষেপ">Steps Today</span>
+                </div>
+                <div class="step-progress-ring">
+                    <svg width="120" height="120">
+                        <circle cx="60" cy="60" r="50" stroke="#e0e0e0" stroke-width="8" fill="none"/>
+                        <circle id="stepProgressCircle" cx="60" cy="60" r="50" stroke="#FF6B35" stroke-width="8"
+                                fill="none" stroke-dasharray="314" stroke-dashoffset="314"/>
+                    </svg>
+                    <div class="step-target" id="stepTarget">10000</div>
+                </div>
+            </div>
+
+            <div class="step-stats-grid">
+                <div class="step-stat">
+                    <div class="stat-value" id="caloriesBurned">0</div>
+                    <div class="stat-label" data-en="Calories" data-bn="ক্যালরি">Calories</div>
+                </div>
+                <div class="step-stat">
+                    <div class="stat-value" id="distanceWalked">0.0</div>
+                    <div class="stat-label" data-en="KM Walked" data-bn="কিমি হেঁটেছি">KM Walked</div>
+                </div>
+                <div class="step-stat">
+                    <div class="stat-value" id="activeMins">0</div>
+                    <div class="stat-label" data-en="Active Mins" data-bn="সক্রিয় মিনিট">Active Mins</div>
+                </div>
+            </div>
+
+            <div class="step-achievements">
+                <h4 data-en="Walking Achievements" data-bn="হাঁটার অর্জন">Walking Achievements</h4>
+                <div id="stepBadges" class="step-badge-container">
+                    <!-- Step badges will be generated here -->
+                </div>
+            </div>
+
+            <div class="step-controls">
+                <button class="btn" onclick="toggleStepTracking()" id="stepTrackBtn">
+                    <i class="fas fa-play"></i>
+                    <span data-en="Start Tracking" data-bn="ট্র্যাকিং শুরু করুন">Start Tracking</span>
+                </button>
+                <button class="btn" onclick="resetDailySteps()">
+                    <i class="fas fa-undo"></i>
+                    <span data-en="Reset Today" data-bn="আজকে রিসেট করুন">Reset Today</span>
+                </button>
+                <button class="btn" onclick="setStepGoal()">
+                    <i class="fas fa-target"></i>
+                    <span data-en="Set Goal" data-bn="লক্ষ্য নির্ধারণ">Set Goal</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="groups" class="content-section">
+    <div class="section-header">
+        <h2> Puja Friend Group</h2>
+        <p>Plan pandal hopping with friends together!</p>
+    </div>
+    <div id="group-setup">
+        <div class="group-card">
+            <div class="group-card-icon"></div>
+            <h3>Create a Group</h3>
+            <p>Start a group and invite your friends with a code</p>
+            <input type="text" id="new-group-name" placeholder="Group name (e.g. Rohit's Puja Gang)" class="group-input" maxlength="40">
+            <button id="create-group-btn" class="group-btn primary" onclick="createPujaGroup()">
+                <i class="fas fa-plus"></i> Create Group
+            </button>
+        </div>
+        <div class="group-divider"><span>OR</span></div>
+        <div class="group-card">
+            <div class="group-card-icon"></div>
+            <h3>Join a Group</h3>
+            <p>Enter the 6-character invite code from your friend</p>
+            <input type="text" id="join-code-input" placeholder="Enter code e.g. ABC123" class="group-input code-input" maxlength="6">
+            <button id="join-group-btn" class="group-btn secondary" onclick="joinPujaGroup()">
+                <i class="fas fa-sign-in-alt"></i> Join Group
+            </button>
+        </div>
+    </div>
+    <div id="group-active" class="hidden">
+        <div class="group-info-card">
+            <div class="group-info-header">
+                <div>
+                    <h3 id="group-name-display">My Group</h3>
+                    <div class="group-code-row">
+                        <span>Invite Code: </span>
+                        <strong id="group-code-display" class="group-code">------</strong>
+                        <button class="icon-btn" onclick="copyGroupCode()"><i class="fas fa-copy"></i></button>
+                        <button class="icon-btn" onclick="shareGroupInvite()"><i class="fas fa-share-alt"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="group-stats" class="group-stats"></div>
+            <div class="group-section-label"> Members</div>
+            <div id="group-members-list" class="members-list"></div>
+        </div>
+        <div class="group-card location-card">
+            <div class="location-header">
+                <div>
+                    <h4> Location Sharing</h4>
+                    <p>Let friends see where you are</p>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="location-share-toggle" onchange="toggleLocationSharing()">
+                    <span class="toggle-track"></span>
+                </label>
+            </div>
+            <div id="group-member-locations" class="member-locations">
+                <p class="group-no-location">No friends sharing location right now</p>
+            </div>
+        </div>
+        <div class="group-card">
+            <h4> Group Bookmarks</h4>
+            <p class="group-hint">When anyone bookmarks a pandal, everyone in the group sees it highlighted.</p>
+            <button class="group-btn outline" onclick="showSection('pandals')">
+                <i class="fas fa-building"></i> Go to Pandals
+            </button>
+        </div>
+
+        <!-- Group Chat -->
+        <div class="group-card group-chat-card">
+            <h4> Group Chat</h4>
+            <div id="group-chat-messages" class="chat-messages">
+                <div class="chat-empty">No messages yet. Say hello! </div>
+            </div>
+            <div class="chat-input-row">
+                <input type="text" id="group-chat-input"
+                       placeholder="Type a message..."
+                       class="chat-input"
+                       onkeypress="handleChatKeypress(event)"
+                       maxlength="300">
+                <button class="chat-send-btn" onclick="sendGroupMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="group-leave">
+            <button class="group-btn danger" onclick="leavePujaGroup()">
+                <i class="fas fa-sign-out-alt"></i> Leave Group
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <p>
+    </p>
+    <div class="disclaimer" style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary); text-align: center; padding: 0 1rem;">
+        <p data-en="⚠️ This app is for informational use only. We are not responsible for map accuracy, crowd data, or external links." data-bn="⚠️ এই অ্যাপটি শুধুমাত্র তথ্যগত ব্যবহারের জন্য। আমরা মানচিত্রের নির্ভুলতা, ভিড়ের তথ্য বা বাহ্যিক লিঙ্কের জন্য দায়বদ্ধ নই।">
+            ⚠️ This app is for informational use only. We are not responsible for map accuracy, crowd data, or external links.
+        </p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
+<script src="script.js"></script>
+<script src="update-manager.js"></script>
+<script src="notification-system.js"></script>
+<script src="push-notifications.js"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+
+<script src="backend.js" type="module"></script>
+<script src="group-crypto.js"></script>
+<script src="group-service.js"></script>
+
+<script src="crowd-checkin.js"></script>
+</body>
+</html>
