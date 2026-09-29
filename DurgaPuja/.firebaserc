@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "https:your.website"
+  },
+  "targets": {
+    "https:your.website": {
+      "hosting": {
+        "main-app": [
+          "https:your.website"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
