@@ -1,0 +1,8 @@
+{
+  "name": "durga-puja-app",
+  "version": "8.2.0",
+  "type": "module",
+  "dependencies": {
+    "@netlify/neon": "^1.0.0"
+  }
+}
