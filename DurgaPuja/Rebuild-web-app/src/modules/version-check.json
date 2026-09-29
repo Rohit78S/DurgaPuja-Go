@@ -1,0 +1,116 @@
+{
+  "VERSION": "8.3.0-beta",
+  "BUILD_DATE": "2026-06-03",
+  "CRITICAL_UPDATE": false,
+  "MIN_SUPPORTED_VERSION": "1.0.0",
+  "FEATURES": [
+ "We’ve upgraded our notification system to keep you better informed during Durga Puja.",
+ "Get timely reminders for Puja dates, daily highlights, and special events.",
+ "Receive real-time weather alerts so you can plan ahead.",
+ "Crowd updates and safety tips will now reach you instantly.",
+ "Location-based notifications help you discover nearby pandals.",
+ "Fun alerts like step counts, badges, and memory prompts keep the experience engaging."
+],
+  "UPDATE_PRIORITY": "medium",
+  "RELEASE_NOTES": "This update brings exciting new features for your Durga Puja experience including notification systems, real-time crowd information and notification, and improved offline functionality.",
+  "CHANGELOG": [
+    "Upgraded notification system for Durga Puja with timely reminders, real-time weather alerts, crowd updates, safety tips, and location-based notifications.",
+    "Added AR selfie filters with Bengali themes",
+    "Implemented real-time pandal crowd tracking",
+    "Enhanced Bengali language translations",
+    "Improved offline map caching",
+    "Added step counter with health tracking",
+    "Better weather integration with 7-day forecast",
+    "Enhanced PWA installation experience",
+    "Fixed memory leaks in map rendering",
+    "Improved loading performance by 40%",
+    "Added accessibility features for screen readers"
+    ,
+    "Added Terms of Service and Privacy Policy links to the app footer"
+  ],
+  "DOWNLOAD_URLS": {
+    "web": "./",
+    "backup": "./",
+    "github": "https://github.com/your-username/durga-puja-guide",
+    "cdn": "https://cdn.jsdelivr.net/gh/your-username/durga-puja-guide/"
+  },
+  "COMPATIBILITY": {
+    "min_chrome": "80",
+    "min_firefox": "75", 
+    "min_safari": "13",
+    "min_edge": "80",
+    "supports_pwa": true,
+    "supports_offline": true,
+    "supports_ar": true,
+    "supports_geolocation": true
+  },
+  "FILE_HASHES": {
+    "main-app.html": "sha256-abc123...",
+    "script.js": "sha256-def456...",
+    "style.css": "sha256-ghi789...",
+    "update-manager.js": "sha256-jkl012...",
+    "service-worker.js": "sha256-mno345..."
+  },
+  "SECURITY": {
+    "content_security_policy": "default-src 'self'; script-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; img-src 'self' data: uploads.onecompiler.io i.pinimg.com; font-src 'self' fonts.gstatic.com;",
+    "permissions_policy": "geolocation=self, camera=self, microphone=(), payment=()",
+    "https_required": true
+  },
+  "METADATA": {
+    "app_name": "Kolkata Durga Puja Guide 2025",
+    "developer": "Rohit",
+    "category": "Travel & Culture",
+    "languages": ["en", "bn"],
+    "regions": ["IN", "BD", "WB"],
+    "size_mb": 12.5,
+    "last_tested": "2025-09-20T10:30:00Z",
+    "quality_score": 95,
+    "user_rating": 4.8
+  },
+  "DEPLOYMENT": {
+    "environment": "production",
+    "cdn_enabled": true,
+    "compression": "gzip",
+    "cache_policy": "max-age=3600",
+    "rollback_version": "1.1.5",
+    "deployment_id": "dp_2025092110",
+    "build_number": 142
+  },
+  "ANALYTICS": {
+    "track_updates": true,
+    "track_usage": false,
+    "privacy_compliant": true,
+    "gdpr_compliant": true,
+    "data_retention_days": 30
+  },
+  "FEATURE_FLAGS": {
+    "enable_ar_filters": true,
+    "enable_crowd_tracking": true,
+    "enable_step_counter": true,
+    "enable_weather": true,
+    "enable_notifications": true,
+    "enable_offline_maps": true,
+    "enable_theme_archive": true,
+    "beta_features": false
+  },
+  "API_ENDPOINTS": {
+    "weather": "https://api.openweathermap.org/data/2.5/",
+    "maps": "https://maps.googleapis.com/maps/api/js",
+    "notifications": "./api/notifications",
+    "analytics": "./api/analytics",
+    "feedback": "./api/feedback"
+  },
+  "SUPPORT": {
+    "documentation": "https://github.com/your-username/durga-puja-guide/wiki",
+    "issues": "https://github.com/your-username/durga-puja-guide/issues", 
+    "email": "support@your-domain.com",
+    "feedback_form": "https://forms.gle/your-form-id"
+  },
+  "UPDATE_SCHEDULE": {
+    "next_major": "2025-10-15",
+    "next_minor": "2025-09-30", 
+    "maintenance_window": "Sunday 02:00-04:00 IST",
+    "emergency_updates": "immediate",
+    "beta_channel": true
+  }
+}
